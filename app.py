@@ -8,14 +8,6 @@ app = Flask(__name__)
 # Secret key for login session
 app.secret_key = "mybank_secret_key"
 
-# MySQL connection
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Siddhu@143",
-    database="banking_syste"
-)
-
 
 @app.route("/")
 def home():
