@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        nav {
+            background: #123c69;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        nav h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #123c69;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #123c69;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 8px;
+        }
+
+        .btn:hover {
+            background: #0b2948;
+        }
+
+        .features {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #123c69;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #123c69;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #123c69;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Cedar &amp; Stone Private Bank</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>Banking with quiet confidence.</h1>
+
+            <p>
+                A considered private banking experience for everyday wealth,
+                clear decisions, and secure movement of your money.
+            </p>
+
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+            <a href="{{ url_for('register') }}" class="btn">Create Account</a>
+
+        </div>
+    </section>
+
+    <section class="features">
+
+        <h2>Everything important, close at hand.</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Deposit</h3>
+                <p>Deposit money into your bank account easily.</p>
+            </div>
+
+            <div class="card">
+                <h3>Withdraw</h3>
+                <p>Withdraw money from your account securely.</p>
+            </div>
+
+            <div class="card">
+                <h3>Transfer</h3>
+                <p>Transfer money between bank accounts.</p>
+            </div>
+
+            <div class="card">
+                <h3>Transactions</h3>
+                <p>View your complete transaction history.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Cedar &amp; Stone Private Bank</p>
+    </footer>
+
+</body>
+</html>

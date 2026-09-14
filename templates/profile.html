@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Cedar &amp; Stone Private Bank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #222;
+        }
+        .navbar {
+            background: #007bff;
+            color: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h2 { margin: 0; }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .profile-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .detail strong { color: #555; }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Cedar &amp; Stone</h2>
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-box">
+            <h1>Account Details</h1>
+            <div class="detail"><strong>Full Name</strong><span>{{ user.full_name }}</span></div>
+            <div class="detail"><strong>Email</strong><span>{{ user.email }}</span></div>
+            <div class="detail"><strong>Phone</strong><span>{{ user.phone }}</span></div>
+            <div class="detail"><strong>Account Number</strong><span>{{ user.account_number }}</span></div>
+            <div class="detail"><strong>Balance</strong><span>₹ {{ user.balance }}</span></div>
+            <div class="detail"><strong>Created At</strong><span>{{ user.created_at }}</span></div>
+            <a class="back-link" href="/dashboard">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
